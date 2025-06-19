@@ -4,6 +4,7 @@ import React from "react";
 import { MotionDiv } from "../components/ui/motion-div";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import projectsData from "@/data/projects.json"; // Import your JSON data
+import Link from "next/link";
 
 const ProjectsSection = () => {
   const stagger = 0.2;
@@ -161,7 +162,7 @@ const ProjectsSection = () => {
           transition={{ delay: projectsData.projects.length * stagger }}
           className="text-center mt-8 md:mt-12 lg:mt-16"
         >
-          <a
+          <Link
             href="#"
             className="inline-flex items-center px-6 py-3 border border-gray-800 text-gray-300 rounded-lg hover:bg-gray-900/50 hover:text-white transition-colors"
           >
@@ -178,7 +179,7 @@ const ProjectsSection = () => {
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               />
             </svg>
-          </a>
+          </Link>
         </MotionDiv>
       </div>
     </section>

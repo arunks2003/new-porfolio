@@ -6,6 +6,7 @@ import { profileData } from "@/data/profileData";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import type { Engine } from "tsparticles-engine";
+import { redirect } from "next/navigation";
 
 const HeroSection = () => {
   const [isClient, setIsClient] = useState(false);
@@ -237,6 +238,7 @@ const HeroSection = () => {
                     ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg hover:shadow-purple-500/20"
                     : "bg-gray-900/70 backdrop-blur-md border border-gray-800 text-gray-200 hover:bg-gray-800/80"
                 } font-medium rounded-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 group`}
+                onClick={() => redirect(button.href)}
               >
                 <span>{button.text}</span>
                 {button.type === "primary" && (

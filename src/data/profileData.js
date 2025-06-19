@@ -1,76 +1,67 @@
-// src/data/profileData.js
 export const profileData = {
-  greeting: "Welcome to my universe",
+  greeting: "Hey, I’m Arun 👋",
   name: "Arun Kumar",
-  title: "Crafting digital experiences that matter",
+  title: "Crafting AI-powered full-stack experiences",
   description:
-    "Full-stack developer specializing in modern web technologies. Currently pursuing Computer Science at XYZ University and building the future of web applications.",
+    "MERN stack developer from IIT BHU passionate about building scalable, performant web apps. Experienced in React, Node.js, Next.js, and AI SaaS tools with real-world impact.",
   details: [
     {
       icon: "location",
-      text: "Hyderabad, India",
+      text: "Varanasi, India",
     },
     {
       icon: "education",
-      text: "IIT BHU",
+      text: "B.Tech, IIT BHU",
     },
   ],
   buttons: [
     {
       text: "Contact Me",
       type: "primary",
+      href: "#contact",
     },
     {
-      text: "View Projects",
+      text: "Resume",
       type: "secondary",
+      href: "https://drive.google.com/file/d/1He2thIs1Qsc1tup1eK8wLpj4BgGH7PSb/view?usp=drive_link",
     },
   ],
   status: {
     available: true,
     text: "Open for work",
   },
-  image: "/my-img.jpg",
+  image: "/my-img.jpg", // Replace with your actual image path
 };
-
-// src/data/profileData.js
 export const educationData = [
   {
     id: 1,
-    degree: "Master of Computer Science",
-    institution: "Stanford University",
-    year: "2021 - 2023",
+    degree: "B.Tech in Civil Engineering",
+    institution: "IIT BHU, Varanasi",
+    year: "2021 - 2025",
     description: "",
-    icon: "graduation-cap",
+    icon: "university",
     highlights: [
-      "GPA: 3.9/4.0",
-      "Research Assistant at AI Lab",
-      "Published 2 papers in top conferences",
+      "CGPA: 8.09",
+      "Technical core: Data Structures, OS, DBMS, CN, OOP",
+      "Leetcode top 2%, Max rating 2052",
     ],
   },
   {
     id: 2,
-    degree: "Bachelor of Science in Software Engineering",
-    institution: "University of California",
-    year: "2017 - 2021",
+    degree: "Class XII (CBSE)",
+    institution: "Sunbeam School Mughalsarai",
+    year: "2020 - 2021",
     description: "",
-    icon: "university",
-    highlights: [
-      "Summa Cum Laude",
-      "Lead Developer for University App",
-      "Dean's List all semesters",
-    ],
+    icon: "school",
+    highlights: ["Scored 96.00%", "Excelled in Computer Science and Math"],
   },
   {
     id: 3,
-    degree: "High School Diploma",
-    institution: "Tech Magnet High School",
-    year: "2013 - 2017",
+    degree: "Class X (CBSE)",
+    institution: "Sunbeam School",
+    year: "2018 - 2019",
     description: "",
     icon: "school",
-    highlights: [
-      "Valedictorian",
-      "National Coding Competition Winner",
-      "Developed first mobile app at 16",
-    ],
+    highlights: ["Scored 97.4%", "Foundation for logical & analytical skills"],
   },
 ];
