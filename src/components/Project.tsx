@@ -3,7 +3,7 @@
 import React from "react";
 import { MotionDiv } from "../components/ui/motion-div";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import projectsData from "@/data/music_courses.json"; // Import your JSON data
+import projectsData from "@/data/projects.json"; // Import your JSON data
 
 const ProjectsSection = () => {
   const stagger = 0.2;
@@ -13,7 +13,10 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="relative py-20 bg-gray-950 overflow-hidden">
+    <section
+      className="relative py-20 bg-gray-950 overflow-hidden"
+      id="projects"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
         <div className="absolute inset-0 bg-[url('/grid-dark.svg')] bg-[length:100px_100px]"></div>

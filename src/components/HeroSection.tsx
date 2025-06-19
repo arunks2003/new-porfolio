@@ -43,7 +43,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen bg-gray-950 overflow-hidden">
+    <section
+      className="relative w-full min-h-screen bg-gray-950 overflow-hidden"
+      id="hero"
+    >
       {/* Background elements remain the same... */}
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24">

@@ -26,7 +26,7 @@
       "id": 3,
       "title": "JobNest",
       "slug": "jobnest",
-      "description": "A MERN stack job portal for employers and job seekers with dashboard, filtering, and resume upload features.",
+      "description": "A MERN stack job portal for empd, filtering, and resume upload features.",
       "techStack": ["MongoDB", "Express", "React", "Node.js"],
       "github": "https://github.com/yourusername/jobnest",
       "live": "https://jobnest.vercel.app",
