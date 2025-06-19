@@ -1,14 +1,22 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import { MotionDiv } from "./ui/motion-div";
 import { profileData } from "@/data/profileData";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
+import type { Engine } from "tsparticles-engine";
 
 const HeroSection = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
+  }, []);
+
+  // Particles initialization function
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadSlim(engine);
   }, []);
 
   const renderIcon = (iconName: string) => {
@@ -47,9 +55,65 @@ const HeroSection = () => {
       className="relative w-full min-h-screen bg-gray-950 overflow-hidden"
       id="hero"
     >
+      {/* Particles.js background */}
+      {isClient && (
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          options={{
+            fullScreen: { enable: false },
+            background: {
+              color: {
+                value: "transparent",
+              },
+            },
+            fpsLimit: 60,
+            particles: {
+              color: {
+                value: ["#9333ea", "#ec4899", "#8b5cf6"],
+              },
+              links: {
+                color: "#ffffff",
+                distance: 150,
+                enable: true,
+                opacity: 0.2,
+                width: 1,
+              },
+              move: {
+                direction: "none",
+                enable: true,
+                outModes: {
+                  default: "bounce",
+                },
+                random: true,
+                speed: 1,
+                straight: false,
+              },
+              number: {
+                density: {
+                  enable: true,
+                  area: 800,
+                },
+                value: 80,
+              },
+              opacity: {
+                value: 0.3,
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                value: { min: 1, max: 5 },
+              },
+            },
+            detectRetina: true,
+          }}
+          className="absolute inset-0 z-0"
+        />
+      )}
       {/* Background elements remain the same... */}
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24">
         {/* Left side - Image */}
         <MotionDiv
           initial={{ opacity: 0, x: -50 }}
