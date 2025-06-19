@@ -1,10 +1,11 @@
 // /app/api/send-email/route.ts
 import { Resend } from 'resend';
 import VerificationEmail from '@/emails/VerificationEmail';
+import { NextRequest, NextResponse } from 'next/server';
 
 export const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   const body = await req.json();
   const { name, message, email } = body;
 
@@ -16,9 +17,9 @@ export async function POST(req: Request) {
       react: VerificationEmail({ name, message, email }),
     });
     console.log('message sent successfully', data);
-    return Response.json({ success: true, data }, { status: 200 });
+    return NextResponse.json({ success: true, data }, { status: 200 });
   } catch (err) {
     console.error("Error sending email", err);
-    return Response.json({ success: false }, { status: 500 });
+    return NextResponse.json({ success: false }, { status: 500 });
   }
 }

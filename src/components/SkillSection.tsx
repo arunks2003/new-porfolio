@@ -39,18 +39,18 @@ const SkillSection = () => {
 
     for (let i = 0; i < fullStars; i++) {
       stars.push(
-        <Star 
-          key={`star-${i}`} 
-          className="w-3 h-3 text-yellow-400 fill-yellow-400" 
+        <Star
+          key={`star-${i}`}
+          className="w-3 h-3 text-yellow-400 fill-yellow-400"
         />
       );
     }
 
     if (hasHalfStar) {
       stars.push(
-        <StarHalf 
-          key="half-star" 
-          className="w-3 h-3 text-yellow-400 fill-yellow-400" 
+        <StarHalf
+          key="half-star"
+          className="w-3 h-3 text-yellow-400 fill-yellow-400"
         />
       );
     }
@@ -109,9 +109,9 @@ const SkillSection = () => {
                 <MotionDiv
                   key={index}
                   variants={item}
-                  whileHover={{ 
+                  whileHover={{
                     y: -5,
-                    transition: { duration: 0.2 }
+                    transition: { duration: 0.2 },
                   }}
                   className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 
                     hover:border-purple-500/50 transition-all duration-300 group 
@@ -132,11 +132,13 @@ const SkillSection = () => {
                       return (
                         <MotionDiv
                           key={skillIndex}
-                          whileHover={{ 
+                          whileHover={{
                             scale: 1.03,
-                            transition: { duration: 0.2 }
+                            transition: { duration: 0.2 },
                           }}
-                          onHoverStart={() => setHoveredSkill(`${index}-${skillIndex}`)}
+                          onHoverStart={() =>
+                            setHoveredSkill(`${index}-${skillIndex}`)
+                          }
                           onHoverEnd={() => setHoveredSkill(null)}
                           className="flex items-center justify-between p-3 rounded-lg 
                             bg-gray-800/50 text-gray-200 
@@ -185,10 +187,10 @@ const SkillSection = () => {
                 <MotionDiv
                   key={index}
                   variants={item}
-                  whileHover={{ 
+                  whileHover={{
                     y: -5,
                     scale: 1.02,
-                    transition: { duration: 0.2 }
+                    transition: { duration: 0.2 },
                   }}
                   className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 
                     hover:border-pink-500/50 transition-all duration-300 group 
@@ -196,8 +198,10 @@ const SkillSection = () => {
                     transform perspective-1000"
                 >
                   <div className="flex flex-col items-center text-center gap-4">
-                    <div className="p-3 rounded-full bg-gradient-to-br from-pink-500/30 to-purple-500/30 
-                      group-hover:from-pink-500/40 group-hover:to-purple-500/40 transition-all duration-300">
+                    <div
+                      className="p-3 rounded-full bg-gradient-to-br from-pink-500/30 to-purple-500/30 
+                      group-hover:from-pink-500/40 group-hover:to-purple-500/40 transition-all duration-300"
+                    >
                       <Icon className="w-6 h-6 text-pink-400 group-hover:text-pink-300" />
                     </div>
                     <div>
