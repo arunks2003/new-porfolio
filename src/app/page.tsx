@@ -2,6 +2,7 @@
 import EducationTimeline from "@/components/Education";
 import HeroSection from "@/components/HeroSection";
 import Project from "@/components/Project";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <Project />
       <EducationTimeline />
+      <ContactForm />
       <Footer />
     </main>
   );
