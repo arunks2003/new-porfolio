@@ -30,7 +30,7 @@ export const profileData = {
     available: true,
     text: "Open for work",
   },
-  image: "/my-img.jpg", // Replace with your actual image path
+  image: "/my-img.jpg",
 };
 export const educationData = [
   {

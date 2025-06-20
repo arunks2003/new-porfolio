@@ -46,7 +46,7 @@ const ProjectsSection = () => {
         </MotionDiv>
 
         {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-6">
           {projectsData.projects.map((project, index) => (
             <MotionDiv
               key={project.id}
@@ -73,7 +73,7 @@ const ProjectsSection = () => {
                   )}
 
                   {/* Project image */}
-                  <CardItem translateZ="100" className="w-full mt-4">
+                  <CardItem translateZ="100" className="w-full mt-2">
                     <div className="relative h-48 w-full overflow-hidden rounded-lg">
                       <img
                         src={project.image}
@@ -153,34 +153,6 @@ const ProjectsSection = () => {
             </MotionDiv>
           ))}
         </div>
-
-        {/* View more button */}
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: projectsData.projects.length * stagger }}
-          className="text-center mt-8 md:mt-12 lg:mt-16"
-        >
-          <Link
-            href="#"
-            className="inline-flex items-center px-6 py-3 border border-gray-800 text-gray-300 rounded-lg hover:bg-gray-900/50 hover:text-white transition-colors"
-          >
-            View All Projects
-            <svg
-              className="w-4 h-4 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeWidth="2"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </Link>
-        </MotionDiv>
       </div>
     </section>
   );
