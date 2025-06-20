@@ -8,7 +8,6 @@ import {
 } from "../components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import data from "../data/projects";
 
 export function NavbarDemo() {
   return (
