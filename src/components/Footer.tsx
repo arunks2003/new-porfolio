@@ -137,7 +137,7 @@ const Footer = () => {
           className="mt-16 pt-8 border-t border-gray-800 text-center"
         >
           <p className="text-gray-500 text-sm">
-            &copy; {currentYear} YourName. All rights reserved.
+            &copy; {currentYear} Arun Kumar. All rights reserved.
           </p>
           <p className="text-gray-600 text-xs mt-2">
             Built with Next.js, Tailwind CSS, and ❤️
